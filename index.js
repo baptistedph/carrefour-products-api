@@ -11,6 +11,6 @@ app.get('/', (req, res) => {
   res.send('No endpoint here')
 })
 
-app.listen(process.env.API_PORT, () =>
-  console.log(`Listening on port ${process.env.API_PORT}`),
-)
+const port = process.env.PORT || process.env.PORT_API
+
+app.listen(port, () => console.log(`Listening on port ${port}`))
